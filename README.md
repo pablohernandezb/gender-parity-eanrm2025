@@ -34,14 +34,17 @@ This repository contains the code and data for my research project on ****candid
 
 * **Structure:** 
     * The repository contains the following scripts for scraping and data cleaning: 
-        * `demback_on_legover_scm.do`: Cleans and prepares the data, executes the main experiments.
-        * `Robustness Checks/3rd Democratization Wave/demback_on_legover_scm.do`: Performs the robustness checks with countries that democratized after the 3rd wave.
+        * `scrape.py` and `scrape_election_type_X.py`: Scrapes the data from the CNE
+        * `json_to_csv.py`: Convert .json files to .csv to prepare them for data analysis on R
+        * `genarete_csv_by_election.py`: Produce .csv by each of the seven election types for individual analysis
+        * `collapse_data.py`: Collapse data by candidates to merge their supporting parties in one single field
+        *  `append_csv.py`: Combine all .csv files obtained from the scraping process
+        *  `circumscriptions_by_state.py`: Obtain the national and sub-national districts for the legilative elections depending on the geographic level by state
 
 **5. Preliminary Results**
 
 * **Key Findings:** 
-    * Despite Hugo Chávez's longer tenure than Maduro's, the biggest drop in the legislature constraints in the executive index was during the second episode of regressed autocracy.
-    * Also, during a regressed autocracy episode, the executive will have more power to divide and coopt the opposition and ignore any subpoenas that may originate from the legislative body. This result is backed by the overwhelming decrease in Executive oversight, Legislature opposition parties, and Legislature questions officials in practice sub-components during the regressed autocracy period.
+    * Depending on election type, there is a varied level of bias againts women. Governor elections are the ones that has less female candidates, which makes sense since there are no quotas. More than 81.49% of the candidates are males. For the legislative elections, only state legislatures are the ones that reach gender parity, the rest have less than 50% of females candidates. 
 * **Visualizations and Plots:** 
     * See the following plots for visualizations of preliminary findings, more results and robustsness checks can be seen on the plots and results directories: 
         * [Candidates' Gender by State](https://github.com/pablohernandezb/gender-parity-eanr2025/blob/main/plots/fig_cand_por_estado.png)
@@ -50,7 +53,7 @@ This repository contains the code and data for my research project on ****candid
 
 **6. Conclusion**
 
-*   * Comming soon.
+    * Comming soon.
 
 **7. Acknowledgements & Contributing**
 
