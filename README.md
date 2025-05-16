@@ -1,4 +1,4 @@
-## Gender Parity Analysis in Authoritarian Elections: Case Venezuela
+## Gender Parity Analysis in Authoritarian Elections: The Case of Venezuela's May 25th Elections
 
 This repository contains the code and data for my research project on ****candidate placement on the Venezuelan parliamentary and regional elections****.
 
