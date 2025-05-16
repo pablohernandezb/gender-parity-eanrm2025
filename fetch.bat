@@ -1,0 +1,18 @@
+curl https://doe.postulaciones.org.ve:8085/api/event/4/fullview/region/ ^
+-H "POST /api/event/4/fullview/region/ HTTP/1.1" ^ 
+-H "Accept: application/json, text/plain, */*" ^ 
+-H "Accept-Encoding: gzip, deflate, br, zstd" ^ 
+-H "Accept-Language: en-US,en;q=0.9,es;q=0.8" ^ 
+-H "Connection: keep-alive" ^ 
+-H "Content-Length: 126" ^ 
+-H "Content-Type: application/json" ^ 
+-H "Host: doe.postulaciones.org.ve:8085" ^ 
+-H "Origin: https://doe.postulaciones.org.ve" ^ 
+-H "Referer: https://doe.postulaciones.org.ve/" ^ 
+-H "Sec-Fetch-Dest: empty" ^
+-H "Sec-Fetch-Mode: cors" ^ 
+-H "Sec-Fetch-Site: same-site" ^ 
+-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" ^ 
+-H "sec-ch-ua: "Chromium";v="136", "Google Chrome";v="136", "Not.A/Brand";v="99"" ^ 
+-H "sec-ch-ua-mobile: ?0" ^ 
+--data-raw "{"eventId":4,"stateCode":1,"municipalityCode":1,"electionType":20,"level":4,"circunscriptionCodes":[2],"codeOrganization":269}"

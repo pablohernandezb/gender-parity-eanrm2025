@@ -1,0 +1,2022 @@
+{
+    "code": 200,
+    "message": "success",
+    "data": [
+        {
+            "cod_municipality": 1,
+            "cod_state": 1,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO LIBERTADOR"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. ANACO"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. ACHAGUAS"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. GIRARDOT"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. ARISMENDI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. CARONI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. BEJUMA"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. ANZOATEGUI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. ACOSTA"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. LEONARDO INFANTE"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. CRESPO"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ALBERTO ADRIANI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. ACEVEDO"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. ACOSTA"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO GENERAL EN JEFE JUAN BAUTISTA ARISMENDI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. ARAURE"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. ARISMENDI"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. AYACUCHO"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. RAFAEL RANGEL"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. BARALT"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO ATURES"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 23,
+            "event_id": 4,
+            "description": "MP. TUCUPITA"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 24,
+            "event_id": 4,
+            "description": "MP. VARGAS"
+        },
+        {
+            "cod_municipality": 1,
+            "cod_state": 26,
+            "event_id": 4,
+            "description": "MP. GUAYANA ESEQUIBA"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. ARAGUA"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. MUÑOZ"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. SANTIAGO MARIÑO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. BARINAS"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. AUTONOMO GENERAL MANUEL CEDEÑO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. CARLOS ARVELO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. AUTONOMO TINAQUILLO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. JULIAN MELLADO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. IRIBARREN"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ANDRES BELLO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. BRION"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO CAPITAN DE NAVIO ANTONIO DIAZ"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. ESTELLER"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. BENITEZ"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. BOCONO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. BRUZUAL"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. SANTA RITA"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO ATABAPO"
+        },
+        {
+            "cod_municipality": 2,
+            "cod_state": 23,
+            "event_id": 4,
+            "description": "MP. PEDERNALES"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. SIMON BOLIVAR"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. PAEZ"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. JOSE FELIX RIBAS"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. ANGOSTURA DEL ORINOCO"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. DIEGO IBARRA"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. GIRARDOT"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. BUCHIVACOA"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. FRANCISCO DE MIRANDA"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. JIMENEZ"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ARZOBISPO CHACON"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO GUAICAIPURO"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. CARIPE"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO GENERAL DE DIVISION FRANCISCO ESTEBAN GOMEZ"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. GUANARE"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. BERMUDEZ"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. CAPACHO NUEVO"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. CARACHE"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. NIRGUA"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. COLON"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO MAROA"
+        },
+        {
+            "cod_municipality": 3,
+            "cod_state": 23,
+            "event_id": 4,
+            "description": "MP. ANTONIO DIAZ"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. MANUEL EZEQUIEL BRUZUAL"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. PEDRO CAMEJO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. SAN CASIMIRO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. EZEQUIEL ZAMORA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. PIAR"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. GUACARA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. PAO DE SAN JUAN BAUTISTA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. CARIRUBANA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. JOSE TADEO MONAGAS"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. MORAN"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. CAMPO ELIAS"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. INDEPENDENCIA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. CEDEÑO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO MANUEL PLACIDO MANEIRO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. GUANARITO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. CAJIGAL"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. CARDENAS"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. ESCUQUE"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. SAN FELIPE"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. MARA"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO RIO NEGRO"
+        },
+        {
+            "cod_municipality": 4,
+            "cod_state": 23,
+            "event_id": 4,
+            "description": "MP. CASACOIMA"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. JUAN MANUEL CAJIGAL"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. ROMULO GALLEGOS"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. SAN SEBASTIAN"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. OBISPOS"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. ROSCIO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. MONTALBÁN"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. RICAURTE"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. COLINA"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. JOSE FELIX RIBAS"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. PALAVECINO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. GUARAQUE"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. LANDER"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. EZEQUIEL ZAMORA"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO TENIENTE CORONEL GASPAR MARCANO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. OSPINO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. MARIÑO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. JAUREGUI"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. TRUJILLO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. MARACAIBO"
+        },
+        {
+            "cod_municipality": 5,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO AUTANA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. PEDRO MARIA FREITES"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. SAN FERNANDO"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. PEDRAZA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. JUAN JOSÉ MORA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. EZEQUIEL ZAMORA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. DEMOCRACIA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. JUAN GERMAN ROSCIO NIEVES"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. TORRES"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP.JULIO CESAR SALAS"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. PAEZ"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO GENERAL EN JEFE SANTIAGO MARIÑO"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. PAEZ"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. MEJIA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. JUNIN"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. URDANETA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. URACHICHE"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. MIRANDA"
+        },
+        {
+            "cod_municipality": 6,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO MANAPIARE"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. INDEPENDENCIA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 3,
+            "event_id": 4,
+            "description": "MP. BIRUACA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. URDANETA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. ROJAS"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. SIFONTES"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. PUERTO CABELLO"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. TINACO"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. FALCON"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. PEDRO ZARAZA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. URDANETA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. JUSTO BRICEÑO"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. PAZ CASTILLO"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. MATURIN"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO PENINSULA DE MACANAO"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. MONTES"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. LOBATERA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. VALERA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. PEÑA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. INDIGENA BOLIVARIANO GUAJIRA"
+        },
+        {
+            "cod_municipality": 7,
+            "cod_state": 22,
+            "event_id": 4,
+            "description": "MP. AUTONOMO ALTO ORINOCO"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. LIBERTAD"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. ZAMORA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. SOSA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO DE ANGOSTURA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. SAN JOAQUÍN"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. LIMA BLANCO"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. FEDERACION"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. CAMAGUAN"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. ANDRES ELOY BLANCO"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. PLAZA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. PIAR"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO TENIENTE CORONEL FELIPE VILLALBA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. TUREN"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. RIBERO"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SAN CRISTOBAL"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. CANDELARIA"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. JOSE ANTONIO PAEZ"
+        },
+        {
+            "cod_municipality": 8,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. MACHIQUES DE PERIJA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. FRANCISCO DE MIRANDA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. ALBERTO ARVELO TORREALBA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. GRAN SABANA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. VALENCIA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 8,
+            "event_id": 4,
+            "description": "MP. ROMULO GALLEGOS"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. MAUROA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP.SAN JOSE DE GUARIBE"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 11,
+            "event_id": 4,
+            "description": "MP. SIMON PLANAS"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. SANTOS MARQUINA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. PUNCERES"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO CORONEL JOSE CELIDONIO TUBORES"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. MONSEÑOR JOSE VICENTE DE UNDA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. URIBANTE"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. MIRANDA"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. LA TRINIDAD"
+        },
+        {
+            "cod_municipality": 9,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. JOSE GREGORIO MONAGAS"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. JOSE ANGEL LAMAS"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. ANTONIO JOSE DE SUCRE"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. EL CALLAO"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. MIRANDA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. MIRANDA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. JUAN JOSE RONDON DELGADILLO"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. MIRANDA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. URDANETA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. SOTILLO"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO TENIENTE CORONEL FRANCISCO ANTOLIN DEL CAMPO"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. AGUA BLANCA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. VALDEZ"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. CORDOBA"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. MONTE CARMELO"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. COCOROTE"
+        },
+        {
+            "cod_municipality": 10,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. LA CAÑADA DE URDANETA"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. FERNANDO DE PEÑALVER"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. CRUZ PAREDES"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 6,
+            "event_id": 4,
+            "description": "MP. PADRE PEDRO CHIEN"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. LOS GUAYOS"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. PETIT"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. EL SOCORRO"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ANTONIO PINTO SALINAS"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. ZAMORA"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. AGUASAY"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 15,
+            "event_id": 4,
+            "description": "MP. BOLIVARIANO ALMIRANTE JOSE MARIA GARCIA"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. PAPELON"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. ANDRES ELOY BLANCO"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. GARCIA DE HEVIA"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. MOTATAN"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. INDEPENDENCIA"
+        },
+        {
+            "cod_municipality": 11,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. LAGUNILLAS"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. SIMON RODRIGUEZ"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. SANTOS MICHELENA"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 5,
+            "event_id": 4,
+            "description": "MP. ANDRES ELOY BLANCO"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. NAGUANAGUA"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. SILVA"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. ORTIZ"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP.OBISPO RAMOS DE LORA"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. CRISTOBAL ROJAS"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. SANTA BARBARA"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. SAN GENARO BOCONOITO"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. GUASIMOS"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. PAMPAN"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. ARISTIDES BASTIDAS"
+        },
+        {
+            "cod_municipality": 12,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. CATATUMBO"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. JUAN ANTONIO SOTILLO"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. MARIO BRICEÑO IRAGORRY"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. SAN DIEGO"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. ZAMORA"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. SANTA MARIA DE IPIRE"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. CARACCIOLO PARRA OLMEDO"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. LOS SALIAS"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 14,
+            "event_id": 4,
+            "description": "MP. URACOA"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. SAN RAFAEL DE ONOTO"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. ANDRES MATA"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. MICHELENA"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. SAN RAFAEL DE CARVAJAL"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. MANUEL MONGE"
+        },
+        {
+            "cod_municipality": 13,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. ROSARIO DE PERIJA"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. SAN JOSE DE GUANIPA"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. TOVAR"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 7,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. DABAJURO"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP. CHAGUARAMAS"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP.CARDENAL QUINTERO"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. ANDRES BELLO"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 16,
+            "event_id": 4,
+            "description": "MP. SANTA ROSALIA"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. LIBERTADOR"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 20,
+            "event_id": 4,
+            "description": "MP. CORONEL JOSE JOAQUIN VEROES"
+        },
+        {
+            "cod_municipality": 14,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. CABIMAS"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. GUANTA"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. CAMATAGUA"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. MONSEÑOR ITURRIZA"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 10,
+            "event_id": 4,
+            "description": "MP.SAN GERONIMO DE GUAYABAL"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. PUEBLO LLANO"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. SIMON BOLIVAR"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 17,
+            "event_id": 4,
+            "description": "MP. CRUZ SALMERON ACOSTA"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. PANAMERICANO"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. ANDRES BELLO"
+        },
+        {
+            "cod_municipality": 15,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. VALMORE RODRIGUEZ"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. PIRITU"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. JOSE RAFAEL REVENGA"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. LOS TAQUES"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. RANGEL"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. BARUTA"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP.PEDRO MARIA UREÑA"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. BOLIVAR"
+        },
+        {
+            "cod_municipality": 16,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. JESUS ENRIQUE LOSSADA"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. TURISTICO DIEGO BAUTISTA URBANEJA"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP. FRANCISCO LINARES ALCANTARA"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. PIRITU"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. RIVAS DAVILA"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. CARRIZAL"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. JOSE FELIPE MARQUEZ CAÑIZALES"
+        },
+        {
+            "cod_municipality": 17,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. ALMIRANTE PADILLA"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. FRANCISCO DEL CARMEN CARVAJAL"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 4,
+            "event_id": 4,
+            "description": "MP.OCUMARE DE LA COSTA DE ORO"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. UNION"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. CHACAO"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. ANDRES BELLO"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. JUAN VICENTE CAMPO ELIAS"
+        },
+        {
+            "cod_municipality": 18,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. SAN FRANCISCO"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. SANTA ANA"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. SAN FRANCISCO"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. TOVAR"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. EL HATILLO"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. FERNANDEZ FEO"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. LA CEIBA"
+        },
+        {
+            "cod_municipality": 19,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. JESUS MARIA SEMPRUN"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP. SIR MC GREGOR"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. JACURA"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. TULIO FEBRES CORDERO"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. BUROZ"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. CAPACHO VIEJO"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 19,
+            "event_id": 4,
+            "description": "MP. PAMPANITO"
+        },
+        {
+            "cod_municipality": 20,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. FRANCISCO JAVIER PULGAR"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 2,
+            "event_id": 4,
+            "description": "MP.SAN JUAN DE CAPISTRANO"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. CACIQUE MANAURE"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. PADRE NOGUERA"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 13,
+            "event_id": 4,
+            "description": "MP. PEDRO GUAL"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SAMUEL DARIO MALDONADO"
+        },
+        {
+            "cod_municipality": 21,
+            "cod_state": 21,
+            "event_id": 4,
+            "description": "MP. SIMON BOLIVAR"
+        },
+        {
+            "cod_municipality": 22,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. PALMASOLA"
+        },
+        {
+            "cod_municipality": 22,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ARICAGUA"
+        },
+        {
+            "cod_municipality": 22,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SEBORUCO"
+        },
+        {
+            "cod_municipality": 23,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. SUCRE"
+        },
+        {
+            "cod_municipality": 23,
+            "cod_state": 12,
+            "event_id": 4,
+            "description": "MP. ZEA"
+        },
+        {
+            "cod_municipality": 23,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. ANTONIO ROMULO COSTA"
+        },
+        {
+            "cod_municipality": 24,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. URUMACO"
+        },
+        {
+            "cod_municipality": 24,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. FRANCISCO DE MIRANDA"
+        },
+        {
+            "cod_municipality": 25,
+            "cod_state": 9,
+            "event_id": 4,
+            "description": "MP. TOCOPERO"
+        },
+        {
+            "cod_municipality": 25,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. JOSE MARIA VARGAS"
+        },
+        {
+            "cod_municipality": 26,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. RAFAEL URDANETA"
+        },
+        {
+            "cod_municipality": 27,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SIMON RODRIGUEZ"
+        },
+        {
+            "cod_municipality": 28,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. TORBES"
+        },
+        {
+            "cod_municipality": 29,
+            "cod_state": 18,
+            "event_id": 4,
+            "description": "MP. SAN JUDAS TADEO"
+        }
+    ]
+}
