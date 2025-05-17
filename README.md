@@ -36,10 +36,10 @@ This repository contains the code and data for my research project on ****candid
     * The repository contains the following scripts for scraping and data cleaning: 
         * `scrape.py` and `scrape_election_type_X.py`: Scrapes the data from the CNE
         * `json_to_csv.py`: Convert .json files to .csv to prepare them for data analysis on R
-        * `genarete_csv_by_election.py`: Produce .csv by each of the seven election types for individual analysis
+        * `generate_csv_by_election.py`: Produce .csv by each of the seven election types for individual analysis
         * `collapse_data.py`: Collapse data by candidates to merge their supporting parties in one single field
-        *  `append_csv.py`: Combine all .csv files obtained from the scraping process
-        *  `circumscriptions_by_state.py`: Obtain the national and sub-national districts for the legilative elections depending on the geographic level by state
+        * `append_csv.py`: Combine all .csv files obtained from the scraping process
+        * `circumscriptions_by_state.py`: Obtain the national and sub-national districts for the legilative elections depending on the geographic level by state
 
 **5. Preliminary Results**
 
@@ -57,7 +57,7 @@ This repository contains the code and data for my research project on ****candid
 
 **7. Acknowledgements & Contributing**
 
-* A million thanks to [Jesús Ojeda Latrónico](https://github.com/ojedalatronico) for helping me with the scrapping
+* A million thanks to [Jesús Ojeda Latrónico](https://github.com/ojedalatronico) for helping me with the scraping!
 * Contributions to this project are welcome. You can contribute by:
     * Reporting bugs or issues
     * Suggesting improvements to the code
