@@ -57,10 +57,11 @@ This repository contains the code and data for my research project on ****candid
 
 **7. Acknowledgements & Contributing**
 
+* A million thanks to [Jesús Ojeda Latrónico](https://github.com/ojedalatronico) for helping me with the scrapping
 * Contributions to this project are welcome. You can contribute by:
     * Reporting bugs or issues
     * Suggesting improvements to the code
-    * Contributing new features or analyses
+    * Contributing the research design or analyses
 
 **8. License**
 
