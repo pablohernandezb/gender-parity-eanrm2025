@@ -28,7 +28,7 @@ This repository contains the code and data for my research project on ****candid
     * Following , I compare models based on the election rule (SMD and PR) and type (National Assembly and State Legislative Councils)
 * **Software and Packages:**
     * To conduct this research I mainly used R version 4.4.3 (2025-02-28 ucrt) to conduct the statistcal models
-    * Python v3.13 was employed to scrappe the data from the CNE's website
+    * Python v3.13 was employed to scrape the data from the CNE's website
 
 **4. Code**
 
