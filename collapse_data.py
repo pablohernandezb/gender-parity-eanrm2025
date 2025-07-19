@@ -52,7 +52,7 @@ def collapse_election_data(input_file, output_file):
         writer.writerows(final_data)
 
 # Ejemplo de uso
-input_file = 'dataset_eanr2025_postulaciones.csv'
-output_file = 'collapsed_election_data.csv'
+input_file = 'dataset_em2025_postulaciones.csv'
+output_file = 'dataset_em2025_candidatos.csv'
 collapse_election_data(input_file, output_file)
 print(f"Se ha creado el archivo '{output_file}' con los datos colapsados.")
