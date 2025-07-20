@@ -5,6 +5,8 @@ library(tidyr)
 library(ggplot2)
 library(purrr)
 library(stringr)
+library(patchwork)
+library(cowplot)
 
 #### Data cleaning ####
 
@@ -206,6 +208,8 @@ print(resultados_genero_por_tipo)
 #   write.csv(dataframes_by_election_type[[name]], paste0(name, ".csv"), row.names = FALSE, fileEncoding = "UTF-8")
 # }
 
+#### Totales (EANR y EM 2025) ####
+
 # Preparar los datos para graficar
 plot_data_list <- lapply(names(resultados_genero_por_tipo), function(election_type) {
   resultados_genero_por_tipo[[election_type]] %>%
@@ -238,6 +242,8 @@ ggplot(plot_data_list, aes(x = election_type, y = percentage, fill = gender)) +
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_election_type_ordered.png", width = 12, height = 8)
+
+#### Gobernador/a (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 2
 election_2_data <- eanr2025 %>%
@@ -274,6 +280,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_2.png", width = 12, height = 8)
 
+#### Alcalde/sa (EM 2025) ####
+
 # 2. Filtrar por election_type_id = 3
 election_3_data <- em2025 %>%
   filter(election_type_id == 3)
@@ -308,6 +316,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_2.png", width = 12, height = 8)
+
+#### Legislador Nominal (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 7
 election_7_data <- eanr2025 %>%
@@ -345,6 +355,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_7.png", width = 12, height = 8)
 
+#### Concejal Nominal por Estado (EANR 2025) ####
+
 # 2. Filtrar por election_type_id = 15
 election_15_data <- em2025 %>%
   filter(election_type_id == 15)
@@ -380,6 +392,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_7.png", width = 12, height = 8)
+
+#### Legislador Indígena (EANR 2025) ####
 
 
 # 2. Filtrar por election_type_id = 13
@@ -417,6 +431,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_13.png", width = 12, height = 8)
+
+#### Concejal Lista por Estado (EM 2025) ####
 
 # Filtrar por election_type_id = 16
 election_16_data <- em2025 %>%
@@ -471,7 +487,7 @@ ggplot(election_16_data, aes(x = municipality_description, y = list_order, fill 
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8)) + # Adjust text size for readability
   facet_wrap(~ state_description, scales = "free_x", ncol = 3) # Facet by state_description
 
-# Plot 
+#### Concejal Lista por tamaño de lista (EM 2025) ####
 
 # Calculate the 'list_size' for each municipality
 # 'list_size' is defined as the highest list_order within that municipality
@@ -503,9 +519,7 @@ ggplot(df_processed, aes(x = list_size, y = list_order, fill = gender)) +
     plot.title = element_text(hjust = 0.5) # Center the plot title
   )
 
-
-
-
+#### Concejal Indígena (EM 2025) ####
 
 
 # 2. Filtrar por election_type_id = 17
@@ -543,6 +557,8 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_13.png", width = 12, height = 8)
+
+#### Diputado Nominal a la AN (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 20
 election_20_data <- eanr2025 %>%
@@ -616,6 +632,8 @@ ggplot(conteo_candidatos, aes(x = cod_circunscription, y = porcentaje, fill = ge
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_24.png", width = 12, height = 8)
 
+#### Legislador Lista (EANR 2025) ####
+
 # Filtrar por election_type_id = 8
 election_8_data <- eanr2025 %>%
   filter(election_type_id == 8)
@@ -637,6 +655,8 @@ ggplot(election_8_data, aes(x = state_description, y = list_order, fill = gender
 
 # Guardar el gráfico (opcional)
 # ggsave("list_order_boxplots_election_type_8.png", width = 12, height = 8)
+
+#### Diputados Indígena a la AN (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 24
 election_24_data <- eanr2025 %>%
@@ -674,6 +694,8 @@ ggplot(conteo_candidatos, aes(x = cod_circunscription, y = porcentaje, fill = ge
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_21.png", width = 12, height = 8)
 
+#### Listas por Estado a la AN (EANR 2025) ####
+
 # Filtrar por election_type_id = 21
 election_21_data <- eanr2025 %>%
   filter(election_type_id == 21 & cod_state != 27)
@@ -695,6 +717,7 @@ ggplot(election_21_data, aes(x = state_description, y = list_order, fill = gende
 # Guardar el gráfico (opcional)
 # ggsave("list_order_boxplots_election_type_21.png", width = 12, height = 8)
 
+#### Listas Nacionales a la AN (EANR 2025) ####
 
 # Filtrar por election_type_id = 21
 election_21_nat_data <- eanr2025 %>%
@@ -718,7 +741,7 @@ ggplot(election_21_nat_data, aes(x = organization_short_name, y = list_order, fi
 # Guardar el gráfico (opcional)
 # ggsave("list_order_boxplots_election_type_21.png", width = 12, height = 8)
 
-## Some stats
+#### Total number of candidates per elections and percentages ####
 
 # Calculate counts and percentages for each gender
 gender_counts_percentages <- em2025 %>%
@@ -759,3 +782,183 @@ gender_counts_percentages <- election_17_data %>%
 
 # Print the resulting table, which will show both the 'n' (count) and 'percentage'
 print(gender_counts_percentages)
+
+
+#### Generate Municipality Plot ####
+
+# --- 1. Define input parameters ---
+TARGET_STATE <- 13
+TARGET_MUNICIPALITY <- 19
+
+ELECTION_ID_MAYOR <- 3
+ELECTION_ID_NOMINAL_COUNCIL <- 15
+ELECTION_ID_LIST_COUNCIL <- 16
+ELECTION_ID_INDIGENOUS_COUNCIL <- 17
+
+# --- 2. Load and Filter Data ---
+# Ensure 'election_type_16.csv' is in your R working directory
+# or provide the full path.
+#em_data <- read.csv('election_type_16.csv')
+
+# Filter data for the specific state and municipality
+filtered_em_data <- em2025 %>%
+  filter(cod_state == TARGET_STATE, cod_municipality == TARGET_MUNICIPALITY)
+
+state_name <- str_to_title(tolower(filtered_em_data$state_description[1]))
+municipality_name <- str_to_title(tolower(filtered_em_data$municipality_description[1]))
+
+# --- 3. Data Preparation for Each Plot Component ---
+
+# Define a consistent color palette for gender
+gender_colors <- c("M" = "green", "F" = "orange")
+
+# --- A. Mayor Data (Percentages) ---
+mayor_data <- filtered_em_data %>%
+  filter(election_type_id == ELECTION_ID_MAYOR) %>%
+  count(gender) %>%
+  mutate(percentage = (n / sum(n)) * 100)
+
+# --- B. Nominal City Council Data (Percentages by Principal/Substitute) ---
+nominal_council_data_processed <- filtered_em_data %>%
+  filter(election_type_id == ELECTION_ID_NOMINAL_COUNCIL) %>%
+  filter(list_order %in% c(1, 2)) %>%
+  mutate(candidate_type = case_when(
+    list_order == 1 ~ "Principal",
+    list_order == 2 ~ "Suplente",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(candidate_type)) %>%
+  group_by(candidate_type, gender) %>%
+  summarise(n = n(), .groups = 'drop') %>%
+  group_by(candidate_type) %>%
+  mutate(percentage = (n / sum(n)) * 100) %>%
+  ungroup()
+
+# --- C. Indigenous City Council Data (Percentages by Principal/Substitute - check if exists) ---
+indigenous_council_data_processed <- filtered_em_data %>%
+  filter(election_type_id == ELECTION_ID_INDIGENOUS_COUNCIL) %>%
+  filter(list_order %in% c(1, 2)) %>%
+  mutate(candidate_type = case_when(
+    list_order == 1 ~ "Principal",
+    list_order == 2 ~ "Suplente",
+    TRUE ~ NA_character_
+  )) %>%
+  filter(!is.na(candidate_type)) %>%
+  group_by(candidate_type, gender) %>%
+  summarise(n = n(), .groups = 'drop') %>%
+  group_by(candidate_type) %>%
+  mutate(percentage = (n / sum(n)) * 100) %>%
+  ungroup()
+
+# --- D. List City Council Data (Boxplot - uses actual list_order as position) ---
+list_council_data <- filtered_em_data %>%
+  filter(election_type_id == ELECTION_ID_LIST_COUNCIL) %>%
+  group_by(municipality_description) %>%
+  mutate(list_size = max(list_order, na.rm = TRUE)) %>%
+  ungroup() %>%
+  arrange(list_size)
+
+list_council_data$list_size <- factor(list_council_data$list_size)
+
+
+# --- 4. Create Individual Plots ---
+
+# Plot 1: Mayor (Non-stacked version)
+plot_mayor <- ggplot(mayor_data, aes(x = "Alcalde(sa)", y = percentage, fill = gender)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.5) +
+  # Updated label format to show raw number (percentage)
+  geom_text(aes(label = sprintf("%d (%.1f%%)", n, percentage)),
+            position = position_dodge(width = 0.5), vjust = -0.5, color = "black", size = 3) +
+  scale_fill_manual(values = gender_colors) +
+  labs(title = "Alcalde(sa)", y = "% de candidatos(as)", x = "") +
+  ylim(0, 100) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        legend.position = "none")
+
+# Plot 2: Nominal City Council Member (Principal vs. Suplente - Non-stacked)
+plot_nominal_council <- ggplot(nominal_council_data_processed, aes(x = candidate_type, y = percentage, fill = gender)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+  # Updated label format to show raw number (percentage)
+  geom_text(aes(label = sprintf("%d (%.1f%%)", n, percentage)),
+            position = position_dodge(width = 0.7), vjust = -0.5, color = "black", size = 3) +
+  scale_fill_manual(values = gender_colors) +
+  labs(title = "Concejal(a) Nominal", y = "", x = "") +
+  ylim(0, 100) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "none")
+
+# Plot 3: Indigenous City Council Member (Conditional, Principal vs. Suplente - Non-stacked)
+plot_indigenous_council <- NULL
+if (nrow(indigenous_council_data_processed) > 0) {
+  plot_indigenous_council <- ggplot(indigenous_council_data_processed, aes(x = candidate_type, y = percentage, fill = gender)) +
+    geom_bar(stat = "identity", position = "dodge", width = 0.7) +
+    # Updated label format to show raw number (percentage)
+    geom_text(aes(label = sprintf("%d (%.1f%%)", n, percentage)),
+              position = position_dodge(width = 0.7), vjust = -0.5, color = "black", size = 3) +
+    scale_fill_manual(values = gender_colors) +
+    labs(title = "Concejal(a) Indígena", y = "", x = "") +
+    ylim(0, 100) +
+    theme_bw() +
+    theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          legend.position = "none")
+}
+
+
+# Plot 4: List City Council Member (Boxplot)
+plot_list_council <- ggplot(list_council_data, aes(x = list_size, y = list_order, fill = gender)) +
+  geom_boxplot() +
+  scale_fill_manual(values = gender_colors) +
+  labs(title = "Concejal(a) Lista",
+       x = "Tamaño de la lista",
+       y = "Posición en la lista",
+       fill = "Género") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+        legend.position = "bottom")
+
+# --- 5. Arrange Plots Using patchwork ---
+
+# Create a common legend from one of the plots (e.g., plot_list_council)
+# Use cowplot::get_legend to extract the legend
+common_legend <- cowplot::get_legend(plot_list_council + theme(legend.box.margin = margin(0, 0, 0, 12)))
+
+# Remove individual legends from sub-plots before combining
+plot_mayor <- plot_mayor + theme(legend.position = "none")
+plot_nominal_council <- plot_nominal_council + theme(legend.position = "none")
+if (!is.null(plot_indigenous_council)) {
+  plot_indigenous_council <- plot_indigenous_council + theme(legend.position = "none")
+}
+plot_list_council <- plot_list_council + theme(legend.position = "none") # Remove its legend from subplot area
+
+# Combine plots based on existence of indigenous data
+if (!is.null(plot_indigenous_council)) {
+  # Arrange bar plots in a row, then the boxplot below, and common legend at bottom
+  combined_plot <- (plot_mayor + plot_nominal_council + plot_indigenous_council) /
+    plot_list_council /
+    common_legend +
+    plot_layout(heights = c(1, 1, 0.1)) + # Adjust heights for plots and legend
+    plot_annotation(
+      title = paste0("Candidatos por género en el\nMunicipio ", municipality_name, " (Estado ", state_name, ")"),
+      theme = theme(plot.title = element_text(hjust = 0.5, size = 18, face = "bold"))
+    )
+} else {
+  # Arrange bar plots in a row, then the boxplot below, and common legend at bottom
+  combined_plot <- (plot_mayor + plot_nominal_council) /
+    plot_list_council /
+    common_legend +
+    plot_layout(heights = c(1, 1, 0.1)) + # Adjust heights for plots and legend
+    plot_annotation(
+      title = paste0("Candidatos por género en el\nMunicipio ", municipality_name, " (Estado ", state_name, ")"),
+      theme = theme(plot.title = element_text(hjust = 0.5, size = 18, face = "bold"))
+    )
+}
+
+# Print the combined plot
+print(combined_plot)
