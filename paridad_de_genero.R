@@ -317,6 +317,58 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_2.png", width = 12, height = 8)
 
+#### Alcalde por Estado (EM 2025) ####
+
+# Filtrar por election_type_id = 3
+election_3_data <- em2025 %>%
+  filter(election_type_id == 3)
+
+unique_states <- unique(election_3_data$cod_state)
+unique_states_desc <- unique(election_3_data$state_description)
+
+
+# 3. Crear los boxplots
+
+# Loop through each state to create a separate plot
+# You can uncomment this loop if you want separate plots per state
+for (state_id in unique_states) {
+  
+  state_data <- election_3_data %>%
+    filter(cod_state == state_id)
+  
+  # 3. Contar candidatos por estado, género y list_order
+  conteo_candidatos <- state_data %>%
+    group_by(municipality_description, gender, list_order) %>%
+    summarise(cantidad = n(), .groups = 'drop') %>%
+    group_by(municipality_description) %>%
+    mutate(porcentaje = cantidad / sum(cantidad) * 100) %>%
+    ungroup()
+  
+  
+  # 4. Preparar los datos para el gráfico (opcional, pero recomendado para ggplot2)
+  #  En este caso, los datos ya están en un formato adecuado para graficar barras apiladas o agrupadas.
+  
+  plot_title <- paste("Distribución de candidatos a Alcalde(sa) en", str_to_title(tolower(unique_states_desc[state_id])))
+  
+  # 5.  Crear el gráfico de barras
+  p <- ggplot(conteo_candidatos, aes(x = municipality_description, y = porcentaje, fill = gender)) +
+        geom_bar(stat = "identity", position = "stack") + # o "stack" para barras apiladas
+        scale_fill_manual(values = c("M" = "green", "F" = "orange")) +
+        labs(
+          title = plot_title,
+          x = "",
+          y = "Porcentaje",
+          fill = "Género"
+        ) +
+        theme_minimal() +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  print(p) # Print the plot to display it
+  
+  # Optional: Save the plot to a file
+  ggsave(filename = paste0("fig_alcalde_", unique_states_desc[state_id], ".png"), plot = p, width = 10, height = 6, bg = "white")
+}
+
 #### Legislador Nominal (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 7
@@ -355,7 +407,7 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_7.png", width = 12, height = 8)
 
-#### Concejal Nominal por Estado (EANR 2025) ####
+#### Concejal Nominal (EANR 2025) ####
 
 # 2. Filtrar por election_type_id = 15
 election_15_data <- em2025 %>%
@@ -392,6 +444,60 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_7.png", width = 12, height = 8)
+
+#### Concejal Nominal por Estado (EM 2025) ####
+
+# Filtrar por election_type_id = 15
+election_15_data <- em2025 %>%
+  filter(election_type_id == 15)
+
+unique_states <- unique(election_15_data$cod_state)
+unique_states_desc <- unique(election_15_data$state_description)
+
+
+# 3. Crear los boxplots
+
+# Loop through each state to create a separate plot
+# You can uncomment this loop if you want separate plots per state
+for (state_id in unique_states) {
+  
+  state_data <- election_15_data %>%
+    filter(cod_state == state_id)
+  
+  # 3. Contar candidatos por estado, género y list_order
+  conteo_candidatos <- state_data %>%
+    group_by(municipality_description, gender, list_order) %>%
+    summarise(cantidad = n(), .groups = 'drop') %>%
+    group_by(municipality_description, list_order) %>%
+    mutate(porcentaje = cantidad / sum(cantidad) * 100) %>%
+    ungroup()
+  
+  
+  # 4. Preparar los datos para el gráfico (opcional, pero recomendado para ggplot2)
+  #  En este caso, los datos ya están en un formato adecuado para graficar barras apiladas o agrupadas.
+  
+  plot_title <- paste("Distribución de candidatos a Concejal(a) Nominal en", str_to_title(tolower(unique_states_desc[state_id])))
+  
+  # 5.  Crear el gráfico de barras
+  p <- ggplot(conteo_candidatos, aes(x = municipality_description, y = porcentaje, fill = gender)) +
+    geom_bar(stat = "identity", position = "stack") + # o "stack" para barras apiladas
+    facet_wrap(~list_order, labeller = labeller(list_order = c("1" = "Principal", "2" = "Suplente"))) +
+    scale_fill_manual(values = c("M" = "green", "F" = "orange")) +
+    labs(
+      title = plot_title,
+      x = "",
+      y = "Porcentaje",
+      fill = "Género"
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  print(p) # Print the plot to display it
+  
+  # Optional: Save the plot to a file
+  ggsave(filename = paste0("fig_concejal_nom_", unique_states_desc[state_id], ".png"), plot = p, width = 10, height = 6, bg = "white")
+}
+
 
 #### Legislador Indígena (EANR 2025) ####
 
@@ -557,6 +663,60 @@ ggplot(conteo_candidatos, aes(x = state_description, y = porcentaje, fill = gend
 
 # Guardar el gráfico (opcional)
 # ggsave("gender_percentage_by_state_election_type_13.png", width = 12, height = 8)
+
+#### Concejal Indígena por Estado (EM 2025) ####
+
+# Filtrar por election_type_id = 17
+election_17_data <- em2025 %>%
+  filter(election_type_id == 17)
+
+unique_states <- unique(election_17_data$cod_state)
+unique_states_desc <- unique(election_17_data$state_description)
+
+
+# 3. Crear los boxplots
+
+# Loop through each state to create a separate plot
+# You can uncomment this loop if you want separate plots per state
+for (state_id in unique_states) {
+  
+  state_data <- election_17_data %>%
+    filter(cod_state == state_id)
+  
+  # 3. Contar candidatos por estado, género y list_order
+  conteo_candidatos <- state_data %>%
+    group_by(municipality_description, gender, list_order) %>%
+    summarise(cantidad = n(), .groups = 'drop') %>%
+    group_by(municipality_description, list_order) %>%
+    mutate(porcentaje = cantidad / sum(cantidad) * 100) %>%
+    ungroup()
+  
+  
+  # 4. Preparar los datos para el gráfico (opcional, pero recomendado para ggplot2)
+  #  En este caso, los datos ya están en un formato adecuado para graficar barras apiladas o agrupadas.
+  
+  plot_title <- paste("Distribución de candidatos a Concejal(a) Indígena en", str_to_title(tolower(unique_states_desc[which(unique_states == state_id)])))
+  
+  # 5.  Crear el gráfico de barras
+  p <- ggplot(conteo_candidatos, aes(x = municipality_description, y = porcentaje, fill = gender)) +
+    geom_bar(stat = "identity", position = "stack") + # o "stack" para barras apiladas
+    facet_wrap(~list_order, labeller = labeller(list_order = c("1" = "Principal", "2" = "Suplente"))) +
+    scale_fill_manual(values = c("M" = "green", "F" = "orange")) +
+    labs(
+      title = plot_title,
+      x = "",
+      y = "Porcentaje",
+      fill = "Género"
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  print(p) # Print the plot to display it
+  
+  # Optional: Save the plot to a file
+  ggsave(filename = paste0("fig_concejal_ind_", unique_states_desc[which(unique_states == state_id)], ".png"), plot = p, width = 10, height = 6, bg = "white")
+}
+
 
 #### Diputado Nominal a la AN (EANR 2025) ####
 
