@@ -962,3 +962,149 @@ if (!is.null(plot_indigenous_council)) {
 
 # Print the combined plot
 print(combined_plot)
+
+#### Índice de Paridad de Género Estadal y Municipal (EM 2025) ####
+
+# --- 1. Cargar Datos ---
+#em_data <- read.csv('election_type_16.csv')
+
+# --- 2. Definir IDs de Tipos de Elección ---
+ELECTION_ID_MAYOR <- 3
+ELECTION_ID_NOMINAL_COUNCIL <- 15
+ELECTION_ID_INDIGENOUS_COUNCIL <- 17
+ELECTION_ID_LIST_COUNCIL <- 16
+
+# --- FUNCIONES AUXILIARES PARA CADA CÁLCULO DE PARIDAD ---
+# (Estas funciones son las mismas que en la respuesta anterior, las incluimos por completitud)
+
+# Función para calcular la paridad de Alcalde(sa)
+calculate_parity_mayor <- function(data_group) {
+  mayor_candidates <- filter(data_group, election_type_id == ELECTION_ID_MAYOR)
+  total_candidates <- nrow(mayor_candidates)
+  if (total_candidates == 0) {
+    NA_real_
+  } else {
+    (sum(mayor_candidates$gender == "F") / total_candidates) * 100
+  }
+}
+
+# Función para calcular la paridad de Concejal(a) Nominal o Indígena
+calculate_parity_nominal_indigenous <- function(data_group, election_id) {
+  candidates <- filter(data_group, election_type_id == election_id, list_order %in% c(1, 2))
+  
+  principal_candidates <- filter(candidates, list_order == 1)
+  total_principals <- nrow(principal_candidates)
+  Paridad_Principal <- if (total_principals == 0) NA_real_ else (sum(principal_candidates$gender == "F") / total_principals) * 100
+  
+  suplente_candidates <- filter(candidates, list_order == 2)
+  total_suplentes <- nrow(suplente_candidates)
+  Paridad_Suplente <- if (total_suplentes == 0) NA_real_ else (sum(suplente_candidates$gender == "F") / total_suplentes) * 100
+  
+  if (is.na(Paridad_Principal) && is.na(Paridad_Suplente)) {
+    NA_real_
+  } else {
+    mean(c(Paridad_Principal, Paridad_Suplente), na.rm = TRUE)
+  }
+}
+
+# Función para calcular la paridad de Concejal(a) Lista
+calculate_parity_list <- function(data_group) {
+  list_candidates <- filter(data_group, election_type_id == ELECTION_ID_LIST_COUNCIL)
+  total_list_candidates <- nrow(list_candidates)
+  
+  if (total_list_candidates == 0) {
+    NA_real_
+  } else {
+    # Componente 1: Porcentaje de Mujeres en la Lista
+    perc_women_list <- (sum(list_candidates$gender == "F") / total_list_candidates) * 100
+    
+    # Componente 2: Paridad de Posición Promedio Normalizada
+    avg_pos_women <- mean(filter(list_candidates, gender == "F")$list_order, na.rm = TRUE)
+    avg_pos_men <- mean(filter(list_candidates, gender == "M")$list_order, na.rm = TRUE)
+    
+    if (is.nan(avg_pos_women)) avg_pos_women <- NA_real_
+    if (is.nan(avg_pos_men)) avg_pos_men <- NA_real_
+    
+    normalized_pos_parity <- NA_real_
+    if (!is.na(avg_pos_women) && !is.na(avg_pos_men)) {
+      diff_avg_pos <- avg_pos_men - avg_pos_women
+      max_list_order_municipality <- max(list_candidates$list_order, na.rm = TRUE)
+      
+      if (max_list_order_municipality <= 1 || is.nan(diff_avg_pos)) {
+        normalized_pos_parity <- 100
+      } else {
+        min_possible_diff = 1 - max_list_order_municipality
+        max_possible_diff = max_list_order_municipality - 1
+        
+        if (max_possible_diff == min_possible_diff) {
+          normalized_pos_parity <- 100
+        } else {
+          normalized_pos_parity <- ((diff_avg_pos - min_possible_diff) / (max_possible_diff - min_possible_diff)) * 100
+        }
+      }
+    } else if (is.na(avg_pos_women) || is.na(avg_pos_men)) {
+      normalized_pos_parity <- 100
+    }
+    
+    # Componente 3: Porcentaje de Mujeres en la Primera Mitad de la Lista
+    first_half_max_order <- ceiling(max(list_candidates$list_order, na.rm = TRUE) / 2)
+    first_half_candidates <- filter(list_candidates, list_order <= first_half_max_order)
+    total_in_first_half <- nrow(first_half_candidates)
+    perc_women_first_half <- if (total_in_first_half == 0) NA_real_ else (sum(first_half_candidates$gender == "F") / total_in_first_half) * 100
+    
+    mean(c(perc_women_list, normalized_pos_parity, perc_women_first_half), na.rm = TRUE)
+  }
+}
+
+
+# --- 3. Calcular Métricas de Paridad por Municipio (¡USANDO do()!) ---
+# Agrupar por estado y municipio
+municipal_parity_metrics <- em2025 %>%
+  group_by(cod_state, cod_municipality, state_description, municipality_description) %>%
+  do({
+    # 'dot' representa el subconjunto de datos para el grupo actual
+    group_data <- .
+    
+    # Llamar a las funciones auxiliares con los datos del grupo actual
+    Paridad_Alcalde_val <- calculate_parity_mayor(group_data)
+    Paridad_Nominal_val <- calculate_parity_nominal_indigenous(group_data, ELECTION_ID_NOMINAL_COUNCIL)
+    Paridad_Indigena_val <- calculate_parity_nominal_indigenous(group_data, ELECTION_ID_INDIGENOUS_COUNCIL)
+    Paridad_Lista_val <- calculate_parity_list(group_data)
+    
+    # Devolver una tabla de una sola fila con los resultados para este grupo
+    tibble(
+      Paridad_Alcalde = Paridad_Alcalde_val,
+      Paridad_Nominal = Paridad_Nominal_val,
+      Paridad_Indigena = Paridad_Indigena_val,
+      Paridad_Lista = Paridad_Lista_val
+    )
+  }) %>%
+  ungroup() # Desagrupar el resultado final
+
+# --- 4. Calcular el Índice de Paridad de Género (IPG) a Nivel Municipal ---
+municipal_gpi <- municipal_parity_metrics %>%
+  rowwise() %>% # Necesario para aplicar mean por fila
+  mutate(GPI_Municipal = mean(c(Paridad_Alcalde, Paridad_Nominal, Paridad_Indigena, Paridad_Lista), na.rm = TRUE)) %>%
+  ungroup()
+
+municipal_gpi <- municipal_parity_metrics %>%
+  rowwise() %>% # Necesario para aplicar mean por fila
+  mutate(GPI_Municipal_wo_Ind = mean(c(Paridad_Alcalde, Paridad_Nominal, Paridad_Lista), na.rm = TRUE)) %>%
+  ungroup()
+
+# --- 5. Calcular el Índice de Paridad de Género (IPG) a Nivel Estatal ---
+state_gpi <- municipal_gpi %>%
+  group_by(cod_state, state_description) %>%
+  summarise(GPI_State = mean(GPI_Municipal, na.rm = TRUE), .groups = 'drop')
+
+state_gpi <- municipal_gpi %>%
+  group_by(cod_state, state_description) %>%
+  summarise(GPI_State_wo_Ind = mean(GPI_Municipal_wo_Ind, na.rm = TRUE), .groups = 'drop')
+
+# --- 6. Mostrar Resultados ---
+
+print("Índice de Paridad de Género a Nivel Municipal:")
+print(municipal_gpi %>% select(cod_state, municipality_description, Paridad_Alcalde, Paridad_Nominal, Paridad_Indigena, Paridad_Lista, GPI_Municipal))
+
+print("Índice de Paridad de Género a Nivel Estatal:")
+print(state_gpi)
