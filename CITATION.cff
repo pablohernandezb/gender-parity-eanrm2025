@@ -1,0 +1,10 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Hernández-Borges"
+  given-names: "Pablo"
+  orcid: "https://orcid.org/0000-0002-3147-1740"
+title: "Gender Parity in the 2025 National Assembly, Regional, and Municipal Elections in Venezuela"
+version: 2.0.0
+date-released: 2024-07-18
+url: "https://github.com/pablohernandezb/gender-parity-eanrm2025"
