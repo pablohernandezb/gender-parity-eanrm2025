@@ -7,6 +7,7 @@ library(purrr)
 library(stringr)
 library(patchwork)
 library(cowplot)
+library(RColorBrewer)
 
 #### Data cleaning ####
 
@@ -1268,3 +1269,179 @@ print(municipal_gpi %>% select(cod_state, municipality_description, Paridad_Alca
 
 print("Índice de Paridad de Género a Nivel Estatal:")
 print(state_gpi)
+
+
+# Define el título común para la leyenda
+legend_title <- "Paridad\nAlcalde(sa) (%)"
+
+# Crea el scatterplot con leyendas combinadas forzadas
+scatterplot_combined_legend_forced <- ggplot(municipal_parity_metrics, aes(
+  x = Paridad_Lista,
+  y = Paridad_Nominal,
+  size = Paridad_Alcalde,
+  color = Paridad_Alcalde
+)) +
+  # Usa geom_jitter() en lugar de geom_point()
+  # Puedes ajustar 'width' y 'height' para controlar la cantidad de jitter
+  geom_jitter(alpha = 0.8, width = 0.5, height = 0.5) +
+  scale_size_continuous(
+    # Establece 'guide = "none"' para suprimir la leyenda de tamaño
+    range = c(2, 10),
+    guide = "none"
+  ) +
+  scale_color_gradient(
+    name = legend_title, # Este será el título de la leyenda principal
+    low = "green",
+    high = "orange",
+    limits = c(0, 100)
+  ) +
+  labs(
+    title = "Componentes del Índice de Paridad Municipal",
+    subtitle = "Elecciones Locales del 27 de julio en Venezuela",
+    x = "Paridad de Concejal(a) por Lista (%)",
+    y = "Paridad de Concejal(a) Nominal (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    plot.subtitle = element_text(hjust = 0.5, size = 10, color = "gray50"),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 10, face = "bold")
+  ) +
+  # Fuerza la leyenda combinada usando guides()
+  guides(
+    color = guide_colorbar(
+      title = legend_title, # Usa el título común
+      # Con 'override.aes', los puntos en la leyenda de color también variarán de tamaño
+      # Esto hace que la leyenda de color represente ambos estéticos
+      override.aes = list(
+        size = seq(from = 2, to = 10, length.out = 5) # Muestra 5 tamaños de puntos en la leyenda
+      )
+    )
+  ) +
+  xlim(20, 80) +
+  ylim(20, 80)
+
+# Muestra el scatterplot
+print(scatterplot_combined_legend_forced)
+
+#### Gráfico de los componentes del IPGM (EM 2025) #### 
+
+# Suponiendo que 'municipal_parity_metrics' ya ha sido creada
+# y contiene las columnas 'Paridad_Alcalde', 'Paridad_Nominal' y 'Paridad_Lista'.
+
+# Paso 1: Crear columnas booleanas para cada condición de 50% o más
+municipal_parity_flags <- municipal_parity_metrics %>%
+  mutate(
+    over_50_alcalde = Paridad_Alcalde >= 50,
+    over_50_nominal = Paridad_Nominal >= 50,
+    over_50_lista = Paridad_Lista >= 50
+  )
+
+# Paso 2: Calcular las cuentas para cada condición y combinación
+parity_counts_table <- tribble(
+  ~Condition, ~Count,
+  "Paridad Alcalde >= 50%", sum(municipal_parity_flags$over_50_alcalde, na.rm = TRUE),
+  "Paridad Nominal >= 50%", sum(municipal_parity_flags$over_50_nominal, na.rm = TRUE),
+  "Paridad Lista >= 50%", sum(municipal_parity_flags$over_50_lista, na.rm = TRUE),
+  "Alcalde Y Nominal >= 50%", sum(municipal_parity_flags$over_50_alcalde & municipal_parity_flags$over_50_nominal, na.rm = TRUE),
+  "Alcalde Y Lista >= 50%", sum(municipal_parity_flags$over_50_alcalde & municipal_parity_flags$over_50_lista, na.rm = TRUE),
+  "Nominal Y Lista >= 50%", sum(municipal_parity_flags$over_50_nominal & municipal_parity_flags$over_50_lista, na.rm = TRUE),
+  "Alcalde Y Nominal Y Lista >= 50%", sum(municipal_parity_flags$over_50_alcalde & municipal_parity_flags$over_50_nominal & municipal_parity_flags$over_50_lista, na.rm = TRUE)
+)
+
+# Paso 3: Calcular el número total de municipios
+total_municipalities <- nrow(municipal_parity_metrics)
+
+# Paso 4: Añadir la columna de porcentaje
+parity_counts_table_with_percentage <- parity_counts_table %>%
+  mutate(
+    Percentage = (Count / total_municipalities) * 100
+  )
+
+# Imprimir la tabla de resultados con porcentajes
+print(parity_counts_table_with_percentage)
+
+# Paso 1: Definir el orden deseado de las categorías (¡tal cual como las quieres en la leyenda!)
+category_order <- c(
+  "Todas",
+  "Alcalde(sa) y Nominal",
+  "Alcalde(sa) y Lista",
+  "Nominal y Lista",
+  "Alcalde(sa)",
+  "Nominal",
+  "Lista",
+  "Ninguna"
+)
+
+# Paso 2: Crear la columna categórica 'Parity_Category'
+# y reordenar sus niveles de factor según 'category_order'.
+municipal_parity_classified <- municipal_parity_flags %>%
+  mutate(
+    Parity_Category = case_when(
+      over_50_alcalde & over_50_nominal & over_50_lista ~ "Todas",
+      over_50_alcalde & over_50_nominal ~ "Alcalde(sa) y Nominal",
+      over_50_alcalde & over_50_lista ~ "Alcalde(sa) y Lista",
+      over_50_nominal & over_50_lista ~ "Nominal y Lista",
+      over_50_alcalde ~ "Alcalde(sa)",
+      over_50_nominal ~ "Nominal",
+      over_50_lista ~ "Lista",
+      TRUE ~ "Ninguna"
+    ),
+    # ¡Importante! Convertir a factor y establecer los niveles para el orden
+    Parity_Category = factor(Parity_Category, levels = category_order)
+  )
+
+# Paso 3: Generar una secuencia de colores para el degradado discreto
+# El color más alto (naranja) para "Todas" y el más bajo (verde) para "Ninguna".
+start_color <- "orange"
+end_color <- "green"
+
+# Crear una función de paleta de colores
+color_palette_func <- colorRampPalette(c(start_color, end_color))
+
+# Generar la cantidad de colores necesaria (según el número de categorías)
+num_categories <- length(category_order)
+gradient_colors <- color_palette_func(num_categories)
+
+# Asignar los nombres de las categorías a los colores generados,
+# asegurando que el orden de los colores coincida con el orden de las categorías.
+names(gradient_colors) <- category_order
+
+# Paso 4: Regenerar el scatterplot con la paleta de colores manual y el orden
+scatterplot_custom_color_order <- ggplot(municipal_parity_classified, aes(
+  x = Paridad_Lista,
+  y = Paridad_Nominal,
+  size = Paridad_Alcalde,
+  color = Parity_Category # Usa la variable categórica reordenada
+)) +
+  geom_jitter(alpha = 0.8, width = 0.5, height = 0.5) +
+  scale_size_continuous(
+    range = c(2, 10),
+    name = "Paridad\nAlcalde(sa) (%)"
+  ) +
+  # Usar scale_color_manual para asignar tus colores específicos
+  scale_color_manual(
+    values = gradient_colors, # La paleta de colores generada
+    name = "Clasificación de Paridad" # Título de la leyenda de color
+  ) +
+  labs(
+    title = "Paridad en Concejo (Lista vs. Nominal) por Clasificación",
+    subtitle = "Tamaño: Paridad de Alcalde(sa) | Color: Clasificación de Paridad",
+    x = "Paridad de Concejal(a) por Lista (%)",
+    y = "Paridad de Concejal(a) Nominal (%)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    plot.subtitle = element_text(hjust = 0.5, size = 10, color = "gray50"),
+    axis.title = element_text(size = 12),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 10, face = "bold")
+  ) +
+  xlim(20, 80) +
+  ylim(20, 80)
+
+# Muestra el scatterplot
+print(scatterplot_custom_color_order)
