@@ -177,6 +177,7 @@ dataframes_by_election_type <- em2025 %>%
   set_names(paste0("election_type_", unique(em2025$election_type_id))) # Nombra los dataframes en la lista
 
 names(dataframes_by_election_type)<-c("election_type_3","election_type_15","election_type_16","election_type_17")
+names(dataframes_by_election_type)<-c("election_type_2", "election_type_7", "election_type_8", "election_type_13", "election_type_20", "election_type_21", "election_type_24")
 
 
 # Ahora 'dataframes_by_election_type' es una lista donde cada elemento es un dataframe
@@ -220,6 +221,12 @@ plot_data_list <- lapply(names(resultados_genero_por_tipo), function(election_ty
 
 # Definir el orden y las etiquetas de los tipos de elección
 election_type_order <- c("election_type_2", "election_type_7", "election_type_8", "election_type_13", "election_type_20", "election_type_21", "election_type_24")
+election_type_labels <- c("Governor", "Legislator (Nominal)", "Legislator (PR List)", "Legislator (Indigenous)", "Deputy (Nominal)", "Deputy (List)", "Deputy (Indigenous)")
+
+election_type_order <- c("election_type_3", "election_type_15", "election_type_16", "election_type_17")
+election_type_labels <- c("Mayor", "City Council Nominal", "City County List", "City Council Indigenous")
+
+election_type_order <- c("election_type_2", "election_type_7", "election_type_8", "election_type_13", "election_type_20", "election_type_21", "election_type_24")
 election_type_labels <- c("Gobernador(a)", "Legislador(a) Nominal", "Legislador(a) Lista", "Legislador(a) Indígena", "Diputado(a) Nominal", "Diputado(a) Lista", "Diputado(a) Indígena")
 
 election_type_order <- c("election_type_3", "election_type_15", "election_type_16", "election_type_17")
@@ -233,10 +240,10 @@ ggplot(plot_data_list, aes(x = election_type, y = percentage, fill = gender)) +
   geom_bar(stat = "identity", position = "dodge") +
   scale_fill_manual(values = c("M" = "green", "F" = "orange")) +
   labs(
-    title = "Porcentaje de Género por Tipo de Elección",
+    title = "Gender Percentage by Type of Election (2025 Municipal Election)",
     x = "",
-    y = "Porcentaje (%)",
-    fill = "Género"
+    y = "Percentage (%)",
+    fill = "Gender"
   ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
